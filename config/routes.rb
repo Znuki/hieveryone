@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-   root "posts#new"# 맨처음 홈 지정을 root로 해준다.
+  # root page로 컨트롤러의 목록으로!
+  root "posts#index"# 맨처음 홈 지정을 root로 해준다.
   get 'home/index'
   get 'home/result' => 'home#result' # 홈컨트롤러로 결과를 보내준다. 응답을 result에서 해준다.
   
