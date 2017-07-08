@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  root "home#index"
+   root "posts#new"# 맨처음 홈 지정을 root로 해준다.
   get 'home/index'
   get 'home/result' => 'home#result' # 홈컨트롤러로 결과를 보내준다. 응답을 result에서 해준다.
+  get 'posts/new'
+  get 'posts/create' => 'posts#create'
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
