@@ -15,6 +15,10 @@ Rails.application.routes.draw do
   #CRUD 중 Destroy에 관련된 내용입니다.
   delete "posts/destroy/:id" => 'posts#destroy'
   
+  #CRUD 중 Update에 관련된 내용입니다.
+  get 'posts/edit/:id' => 'posts#edit'
+  #post 'posts/update/:id' => 'posts#update' # post를 patch로 바꿔도 되는데 코드 한줄 추가해야함. <input type="hidden" name="_method" value="patch" /> 바로 이거!
+  patch 'posts/update/:id' => 'posts#update'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

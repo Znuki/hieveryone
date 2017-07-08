@@ -6,5 +6,6 @@
     <%= p.content %>
     <a href="/posts/show/<%= p.id %>">이 글 보 러 가 기</a>
     <a href="/posts/destroy/<%= p.id %>" data-confirm="지워도되요?" data-method='delete'>삭제</a>
+    <a href="/posts/edit/<%= p.id %>">수 정</a>   
     <hr>
 <% end %>
