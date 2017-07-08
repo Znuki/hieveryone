@@ -21,4 +21,12 @@ class PostsController < ApplicationController
         @post = Post.find(params[:id])
 
     end
+    def destroy
+         # 하나를 삭제하는 아이
+         @post = Post.find(params[:id])
+         # 삭제한다.
+         @post.destroy
+         # 삭제했으니까 이제 목록을 보여줘라.
+         redirect_to "/posts/index"
+    end
 end

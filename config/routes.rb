@@ -8,10 +8,12 @@ Rails.application.routes.draw do
   get 'posts/new'
   post 'posts/create' => 'posts#create'
   
-  #CRUD 중 Read에 관뢴된 내용입니다.
+  #CRUD 중 Read에 관련된 내용입니다.
   get 'posts/index'
   get 'posts/show/:id' => 'posts#show'
   
+  #CRUD 중 Destroy에 관련된 내용입니다.
+  delete "posts/destroy/:id" => 'posts#destroy'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
