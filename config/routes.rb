@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'home/result' => 'home#result' # 홈컨트롤러로 결과를 보내준다. 응답을 result에서 해준다.
   get 'posts/new'
-  get 'posts/create' => 'posts#create'
+  post 'posts/create' => 'posts#create'
   
   
   # The priority is based upon order of creation: first created -> highest priority.
